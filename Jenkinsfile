@@ -5,6 +5,8 @@ pipeline {
       steps {
         println 'Starting build ..'
         sh './gradlew build'
+        println 'List artifacts ..'
+        sh 'ls -la ./dist/*'
       }
     }
   }
