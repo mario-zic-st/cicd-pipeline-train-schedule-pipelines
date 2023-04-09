@@ -7,6 +7,8 @@ pipeline {
         sh './gradlew build'
         println 'List artifacts ..'
         sh 'ls -la ./dist/*'
+        // archive
+        archiveArtifacts artifacts: 'dist/trainSchedule.zip'
       }
     }
   }
